@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.signin {
+  display: flex;
+  flex-direction: row;
+}
+.signin-with {
+  margin: 25px 0 25px 0;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background: #000000;
+  width: 588px;
+  height: 100vh;
+  font-weight: 700;
+}
+.left h2 {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}
+.right {
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  max-width: 385px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+}
+.input-area {
+  border-radius: 20px;
+  background: #ffffff;
+  max-width: 385px;
+  max-height: 317px;
+  padding: 25px;
+}
+input {
+  border: 0;
+  width: 325px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--field-color-darker, #EAEAEA);
+  margin: 0 0 20px 0;
+}
+input::placeholder {
+  padding: 0 0 0 10px;
+}
+.buttons {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 180px;
+  height: 30px;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+}
+.submit-btn {
+  
+  font-family: 'Montserrat', sans-serif;
+  width: 325px;
+  height: 40px;
+  background: #000000;
+  border: 0;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+}
+.mr10 {
+  margin-right: 25px;
+}
+.signup {
+  font-family: 'Lato', sans-serif;
+  width: 385px;
+  text-align: center;
+}
+/* Text Styling */
+.h1_signin {
+  font-size: 36px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.h3_des {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 1px 0;
+}
+.label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+.p_fp {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #346BD4;
+  margin: 0 0 20px 0;
+}
+p a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #346BD4;
+  margin: 0 0 20px 0;
+  text-decoration: none;
+  font-size: 16px;
+}
+.p-signup {
+  color: #858585;
+}
