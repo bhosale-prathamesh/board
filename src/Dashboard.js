@@ -5,17 +5,19 @@ import profile from './image1.png';
 
 
 function Dashboard() {
-
+  let data;
   fetch('https://board-api-xah1.onrender.com')
   .then(response => response.json())
   .then((jsonData) => {
     // jsonData is parsed json object received from url
     console.log(jsonData)
+    data = jsonData
   })
   .catch((error) => {
     // handle your errors here
     console.error(error)
   })
+  console.log(data)
 
   
   return (
