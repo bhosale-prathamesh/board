@@ -144,6 +144,10 @@ p a {
     width: 100%;
   }
   .right {
+    
     align-items: flex-start;
+  }
+  .main-first {
+    width: auto;
   }
 }
