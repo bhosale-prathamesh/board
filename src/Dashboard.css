@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  width: 100%;
+  width: 100vh;
 }
 .sidebar {
   display: flex;
@@ -367,6 +367,7 @@ font-weight: 700;
 @media (max-width: 1040px ) {
   .dashboard {
     flex-direction: column;
+    width: auto;
   }
   .sidebar {
     display: flex;
