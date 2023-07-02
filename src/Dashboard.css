@@ -252,12 +252,12 @@ font-weight: 700;
   color: #999999;
 }
 
-.line-6 {
+.line1 {
   width: 66px;
   height: 0px;
   left: 940px;
   top: 765px;
-  border: 5px solid #9BDD7C;
+  border-top: 5px solid #9BDD7C;
   transform: rotate(90deg);
 }
 
@@ -325,11 +325,11 @@ font-weight: 700;
   color: #999999;
 }
 
-.line-6 {
+.line2 {
   width: 66px;
   height: 0px;
   left: 940px;
   top: 844px;
-  border: 5px solid #6972C4;
+  border-top: 5px solid #6972C4;
   transform: rotate(90deg);
 }

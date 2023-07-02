@@ -127,7 +127,7 @@ function Dashboard() {
       <div className='time'>14.00-15.00</div>
       <div className='location'>at Sunset Road, Kuta, Bali</div>
     </div>
-    <div className='line-6'></div>
+    <div className='line1'></div>
     <div className='see-all'>See All</div>
     <div className='vector'></div>
     <div className='group-20'>
@@ -135,7 +135,7 @@ function Dashboard() {
       <div className='time'>18.00-20.00</div>
       <div className='location'>at Central Jakarta</div>
     </div>
-    <div className='line-6'></div>
+    <div className='line2'></div>
   
           </div>
         </div>
