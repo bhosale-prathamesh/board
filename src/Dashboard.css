@@ -89,6 +89,9 @@ h2 {
    background: #ffffff;
    margin: 0;
 }
+.input2 {
+  margin: 0 0 0 30px;
+}
 .cards {
   display: flex;
   flex-direction: row;
@@ -210,9 +213,10 @@ font-weight: 700;
 }
 .todays-schedule {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 12px;
   color: #000000;
 }
 
@@ -255,12 +259,15 @@ font-weight: 700;
 .line1 {
   width: 66px;
   height: 0px;
-  left: 940px;
-  top: 765px;
   border-top: 5px solid #9BDD7C;
   transform: rotate(90deg);
 }
-
+.group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
 .see-all {
   width: 41px;
   height: 15px;
