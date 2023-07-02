@@ -2,7 +2,22 @@ import React from 'react';
 import './Dashboard.css';
 import profile from './image1.png';
 
+
+
 function Dashboard() {
+
+  fetch('https://board-api-xah1.onrender.com')
+  .then(response => response.json())
+  .then((jsonData) => {
+    // jsonData is parsed json object received from url
+    console.log(jsonData)
+  })
+  .catch((error) => {
+    // handle your errors here
+    console.error(error)
+  })
+
+  
   return (
     <div className='dashboard'>
       <div className='sidebar'>
