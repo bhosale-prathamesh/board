@@ -59,11 +59,14 @@ function Dashboard() {
       <div className='main'>
         <div className='main-first'>
           <h2>Dashboard</h2>
+          <div className='main-first-2'>
           <input type='text' placeholder='Search...'></input>
           <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16 11.586V8C16 4.783 13.815 2.073 10.855 1.258C10.562 0.52 9.846 0 9 0C8.154 0 7.438 0.52 7.145 1.258C4.185 2.074 2 4.783 2 8V11.586L0.293001 13.293C0.199958 13.3857 0.126171 13.4959 0.0758854 13.6172C0.0256001 13.7386 -0.000189449 13.8687 1.04767e-06 14V16C1.04767e-06 16.2652 0.105358 16.5196 0.292894 16.7071C0.480431 16.8946 0.734785 17 1 17H17C17.2652 17 17.5196 16.8946 17.7071 16.7071C17.8946 16.5196 18 16.2652 18 16V14C18.0002 13.8687 17.9744 13.7386 17.9241 13.6172C17.8738 13.4959 17.8 13.3857 17.707 13.293L16 11.586ZM16 15H2V14.414L3.707 12.707C3.80004 12.6143 3.87383 12.5041 3.92412 12.3828C3.9744 12.2614 4.00019 12.1313 4 12V8C4 5.243 6.243 3 9 3C11.757 3 14 5.243 14 8V12C14 12.266 14.105 12.52 14.293 12.707L16 14.414V15ZM9 20C9.6193 20.0008 10.2235 19.8086 10.7285 19.4502C11.2335 19.0917 11.6143 18.5849 11.818 18H6.182C6.38566 18.5849 6.76648 19.0917 7.27151 19.4502C7.77654 19.8086 8.3807 20.0008 9 20V20Z" fill="black"/>
 </svg>
 <img src={profile} alt="Profile Pic" width="50" height="50"></img>
+          </div>
+          
 
 
         </div>
@@ -118,10 +121,22 @@ function Dashboard() {
 
           </div>
           <div className='ts r-white'>
-            <div className='ts-1'><h4>Today’s schedule</h4><p>See All</p><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.255719 7.7814C-0.0722496 7.4807 -0.097987 7.06206 0.255719 6.69446L3.0111 3.99918L0.255719 1.3039C-0.0979873 0.936304 -0.0722499 0.516977 0.255719 0.218345C0.582952 -0.0823567 1.13594 -0.0630456 1.44332 0.218345C1.7507 0.498356 4.75389 3.4564 4.75389 3.4564C4.83173 3.52684 4.89364 3.61127 4.93592 3.70464C4.97821 3.79802 5 3.89843 5 3.99987C5 4.10132 4.97821 4.20173 4.93592 4.2951C4.89364 4.38848 4.83173 4.4729 4.75389 4.54334C4.75389 4.54334 1.7507 7.50001 1.44332 7.7814C1.13594 8.06348 0.582952 8.0821 0.255719 7.7814Z" fill="#858585"/>
-</svg>  
-</div>
+    <div className='todays-schedule'>Today's schedule</div>
+    <div className='group-19'>
+      <div className='meeting'>Meeting with suppliers from Kuta Bali</div>
+      <div className='time'>14.00-15.00</div>
+      <div className='location'>at Sunset Road, Kuta, Bali</div>
+    </div>
+    <div className='line-6'></div>
+    <div className='see-all'>See All</div>
+    <div className='vector'></div>
+    <div className='group-20'>
+      <div className='check-operation'>Check operation at Giga Factory 1</div>
+      <div className='time'>18.00-20.00</div>
+      <div className='location'>at Central Jakarta</div>
+    </div>
+    <div className='line-6'></div>
+  
           </div>
         </div>
       </div>
