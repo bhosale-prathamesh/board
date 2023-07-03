@@ -1,6 +1,8 @@
 import './Dashboard.css';
 import React, { useEffect, useState } from 'react';
 import profile from './image1.png';
+import PieChart from './PieChart';
+import LineChart from './LineChart';
 
 function Dashboard() {
   const [data, setData] = useState(null);
@@ -24,6 +26,24 @@ function Dashboard() {
     <div className='dashboard'>
       <div className='sidebar'>
         <h2>Board.</h2>
+        <section className='p-menu1'>
+  <nav id='navbar' className='navigation' role='navigation'>
+    <input id='toggle1' type='checkbox' />
+    <label className='hamburger1' for='toggle1'>
+      <div className='top'></div>
+      <div className='meat'></div>
+      <div className='bottom'></div>
+    </label>
+  
+    <nav className='menu1'>
+      <a className='link1' href=''>Our Models</a>
+      <a className='link1' href=''>Specialties</a>
+      <a className='link1' href=''>About</a>
+      <a className='link1' href=''>Blog</a>
+      <a className='lin1 kbutton-nav' href=''>Contact</a>
+    </nav>
+</nav>
+</section>
         <ul>
           <li><span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.8995 0C9.66079 0 9.43186 0.0948265 9.26307 0.263619C9.09428 0.432411 8.99945 0.661343 8.99945 0.900051V8.10046C8.99945 8.33917 9.09428 8.5681 9.26307 8.73689C9.43186 8.90568 9.66079 9.00051 9.8995 9.00051H17.0999C17.3386 9.00051 17.5675 8.90568 17.7363 8.73689C17.9051 8.5681 18 8.33917 18 8.10046C18 5.95208 17.1465 3.8917 15.6274 2.37257C14.1083 0.853439 12.0479 0 9.8995 0ZM10.7996 7.20041V1.86311C12.1462 2.05717 13.3939 2.68195 14.3559 3.64402C15.318 4.60609 15.9428 5.85375 16.1369 7.20041H10.7996Z" fill="white" />
@@ -104,14 +124,24 @@ function Dashboard() {
             <p>Total Users</p><h3>892</h3></div>
         </div>
         <div className='main-3 r-white'>
+          
           <div className='main-3-1'>
-          <h4>Activities</h4>
+          <div><h4>Activities</h4>
 
           <div className='left-side'><p>May - June 2021 </p>
           <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.218599 0.255719C0.5193 -0.0722496 0.937938 -0.097987 1.30554 0.255719L4.00082 3.0111L6.69609 0.255719C7.0637 -0.097987 7.48302 -0.0722496 7.78166 0.255719C8.08236 0.582952 8.06305 1.13594 7.78166 1.44332C7.50164 1.7507 4.5436 4.75389 4.5436 4.75389C4.47316 4.83173 4.38873 4.89364 4.29536 4.93592C4.20198 4.97821 4.10157 5 4.00013 5C3.89868 5 3.79827 4.97821 3.7049 4.93592C3.61152 4.89364 3.5271 4.83173 3.45666 4.75389C3.45666 4.75389 0.499989 1.7507 0.218599 1.44332C-0.0634812 1.13594 -0.0821026 0.582952 0.218599 0.255719Z" fill="#858585" />
-          </svg></div>
-
+          </svg>
+          </div></div>
+          <div className='ug'>
+<div className='green'></div>
+<p>Guest</p>
+<div className='blue'></div>
+<p>User</p>
+</div>
+          </div>
+          <div className='main-3-2'>
+          <LineChart />
           </div>
         </div>
         <div className='main-4'>
@@ -128,9 +158,35 @@ function Dashboard() {
             <div className='tp-2'>
 
               <div className='chart-right'>
-                
+              <PieChart />
               </div>
-              <div className='desc-right'></div>
+              <div className='desc-right'>
+                <div className='dr'>
+    <div className='ellipse1'></div>
+    
+  <div className='item'>
+    <div className='text'>Basic Tees</div>
+    <div className='percentage'>55%</div>
+  </div>
+  </div>
+  
+  <div className='dr'>
+    <div className='ellipse2'></div>
+    <div className='item'>
+    <div className='text'>Custom Short Pants</div>
+    <div className='percentage'>31%</div>
+  </div>
+  </div>
+    
+  <div className='dr'>
+    <div className='ellipse3'></div>
+  <div className='item'>
+    <div className='text'>Super Hoodies</div>
+    <div className='percentage'>14%</div>
+</div>
+</div>
+
+              </div>
             </div>
 
           </div>
@@ -144,21 +200,15 @@ function Dashboard() {
             </div>
             <div className='groups'>
             <div className='group'>
-              <div className='line1'></div>
-              <div className='group-19'>
                 <div className='meeting'>Meeting with suppliers from Kuta Bali</div>
                 <div className='time'>14.00-15.00</div>
                 <div className='location'>at Sunset Road, Kuta, Bali</div>
-              </div>
             </div>
 
             <div className='group'>
-              <div className='line2'></div>
-              <div className='group-20'>
                 <div className='check-operation'>Check operation at Giga Factory 1</div>
                 <div className='time'>18.00-20.00</div>
                 <div className='location'>at Central Jakarta</div>
-              </div>
             </div>
             </div>
           </div>
