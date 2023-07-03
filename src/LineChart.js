@@ -33,25 +33,25 @@ const LineChart = () => {
       }));
 
       // Update the x-axis labels
-      const xLabels = chartRef.current.getElementsByClassName('x-label');
+      const xLabels = chartRef.current.querySelectorAll('.x-label');
       for (let i = 0; i < xLabels.length; i++) {
         const x = 50 + i * xStep;
         xLabels[i].setAttribute('x', x);
       }
 
       // Update the y-axis labels
-      const yLabels = chartRef.current.getElementsByClassName('y-label');
+      const yLabels = chartRef.current.querySelectorAll('.y-label');
       for (let i = 0; i <= numLines; i++) {
         const y = 250 - i * yStep;
         yLabels[i].setAttribute('y', y);
       }
 
       // Update the user line
-      const userLine = chartRef.current.getElementById('user-line');
+      const userLine = chartRef.current.querySelector('#user-line');
       userLine.setAttribute('points', coordinates.map(coord => `${coord.x},${coord.yUser}`).join(' '));
 
       // Update the guest line
-      const guestLine = chartRef.current.getElementById('guest-line');
+      const guestLine = chartRef.current.querySelector('#guest-line');
       guestLine.setAttribute('points', coordinates.map(coord => `${coord.x},${coord.yGuest}`).join(' '));
     };
 
