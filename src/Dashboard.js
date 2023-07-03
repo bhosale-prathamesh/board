@@ -35,13 +35,6 @@ function Dashboard() {
       <div className='bottom'></div>
     </label>
   
-    <nav className='menu1'>
-      <a className='link1' href=''>Dashboard</a>
-      <a className='link1' href=''>Transactions</a>
-      <a className='link1' href=''>Schedules</a>
-      <a className='link1' href=''>Users</a>
-      <a className='lin1 kbutton-nav' href=''>Settings</a>
-    </nav>
 </nav>
 </section>
         <ul>
