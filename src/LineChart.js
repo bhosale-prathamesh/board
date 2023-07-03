@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const LineChart = () => {
+  const chartRef = useRef(null);
+
   // Dummy data for the line chart
   const data = [
     { week: 'Week 1', user: 200, guest: 150 },
@@ -9,25 +11,64 @@ const LineChart = () => {
     { week: 'Week 4', user: 140, guest: 190 },
   ];
 
-  // Calculate the maximum value from data to determine y-axis range
-  const maxValue = Math.max(
-    Math.max(...data.map(item => item.user)),
-    Math.max(...data.map(item => item.guest))
-  );
+  useEffect(() => {
+    const updateChart = () => {
+      const chartWidth = chartRef.current.getBoundingClientRect().width;
+      const numLines = 5;
+      const lineChartWidth = chartWidth - 60; // Adjust for margins
+      const xStep = lineChartWidth / (data.length - 1);
+      const yStep = 200 / numLines;
 
-  // Calculate the x and y coordinates for each point
-  const coordinates = data.map((item, index) => ({
-    x: 50 + (index * 400) / (data.length - 1),
-    yUser: 250 - (200 * item.user) / maxValue,
-    yGuest: 250 - (200 * item.guest) / maxValue,
-  }));
+      // Calculate the maximum value from data to determine y-axis range
+      const maxValue = Math.max(
+        Math.max(...data.map(item => item.user)),
+        Math.max(...data.map(item => item.guest))
+      );
+
+      // Calculate the x and y coordinates for each point
+      const coordinates = data.map((item, index) => ({
+        x: 50 + index * xStep,
+        yUser: 250 - (200 * item.user) / maxValue,
+        yGuest: 250 - (200 * item.guest) / maxValue,
+      }));
+
+      // Update the x-axis labels
+      const xLabels = chartRef.current.getElementsByClassName('x-label');
+      for (let i = 0; i < xLabels.length; i++) {
+        const x = 50 + i * xStep;
+        xLabels[i].setAttribute('x', x);
+      }
+
+      // Update the y-axis labels
+      const yLabels = chartRef.current.getElementsByClassName('y-label');
+      for (let i = 0; i <= numLines; i++) {
+        const y = 250 - i * yStep;
+        yLabels[i].setAttribute('y', y);
+      }
+
+      // Update the user line
+      const userLine = chartRef.current.getElementById('user-line');
+      userLine.setAttribute('points', coordinates.map(coord => `${coord.x},${coord.yUser}`).join(' '));
+
+      // Update the guest line
+      const guestLine = chartRef.current.getElementById('guest-line');
+      guestLine.setAttribute('points', coordinates.map(coord => `${coord.x},${coord.yGuest}`).join(' '));
+    };
+
+    window.addEventListener('resize', updateChart);
+    updateChart();
+
+    return () => {
+      window.removeEventListener('resize', updateChart);
+    };
+  }, []);
 
   // Calculate the number of parallel lines
   const numLines = 5;
 
   return (
-    <div style={{ width: '100%' }}>
-      <svg width="100%" height="300">
+    <div ref={chartRef} style={{ width: '100%' }}>
+      <svg className="line-chart" width="100%" height="300">
         {/* Draw parallel lines */}
         {Array.from({ length: numLines }).map((_, index) => (
           <line
@@ -46,26 +87,26 @@ const LineChart = () => {
         <line x1="50" y1="50" x2="50" y2="250" stroke="black" strokeWidth="1" />
         {/* Draw x-axis labels */}
         {data.map((item, index) => (
-          <text key={index} x={50 + (index * 400) / (data.length - 1)} y="270" textAnchor="middle">
+          <text key={index} className="x-label" x={50 + index * ((chartRef.current?.getBoundingClientRect().width - 60) / (data.length - 1))} y="270" textAnchor="middle">
             {item.week}
           </text>
         ))}
         {/* Draw y-axis labels */}
-        {Array.from({ length: 6 }).map((_, index) => (
-          <text key={index} x="40" y={250 - (index * 200) / 5} textAnchor="end">
+        {Array.from({ length: numLines + 1 }).map((_, index) => (
+          <text key={index} className="y-label" x="40" y={250 - index * (200 / numLines)} textAnchor="end">
             {index * 100}
           </text>
         ))}
         {/* Draw user line */}
         <polyline
-          points={coordinates.map(coord => `${coord.x},${coord.yUser}`).join(' ')}
+          id="user-line"
           fill="none"
           stroke="blue"
           strokeWidth="2"
         />
         {/* Draw guest line */}
         <polyline
-          points={coordinates.map(coord => `${coord.x},${coord.yGuest}`).join(' ')}
+          id="guest-line"
           fill="none"
           stroke="green"
           strokeWidth="2"

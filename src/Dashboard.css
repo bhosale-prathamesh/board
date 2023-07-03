@@ -238,6 +238,10 @@ h2 {
   width: auto;
   height: 50px;
 }
+svg .line-chart {
+  
+  margin: 0 10px 0 0;
+}
 .ug {
   align-items: center;
   display: flex;
