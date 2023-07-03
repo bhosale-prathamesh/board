@@ -610,7 +610,7 @@ margin: 0;
   
   }
   .sidebar h2 {
-    display: none;
+    visibility: none;
   }
 
   .sidebar ul li h3 {
