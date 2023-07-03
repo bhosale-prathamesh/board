@@ -418,14 +418,16 @@ margin: 0;
 }
 
 #toggle1:checked ~ .menu1 {
-  height: 340px;
+  
+  width: 100%;
+  background-color: #000000;
 }
 
 
 /* Menu */
 .menu1 {
   width: 100%;
-  background-color: #02173F;
+  background-color: #000000;
   margin: 0;
   display: -ms-grid;
   display: grid;
@@ -439,7 +441,7 @@ margin: 0;
   height: 0px;
   overflow: hidden;
   transition: height .4s ease;
-  z-index: 120;
+  z-index: 999999;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -598,7 +600,7 @@ margin: 0;
   .sidebar {
   display: flex;
   background: #000000;
-  border-radius: 30px;
+  border-radius: 10px;
   width: 100px;
   height: 90vh;
   flex-direction: column;
@@ -625,7 +627,7 @@ margin: 0;
   .sidebar {
     display: flex;
     background: #000000;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%;
     height: 100px;
     flex-direction: row;
